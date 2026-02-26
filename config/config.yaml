@@ -1,0 +1,29 @@
+# Application Configuration
+app:
+  name: "MLOps Content Generator"
+  version: "1.0.0"
+  environment: "development"  # development, staging, production
+
+# Model Configuration
+model:
+  primary_model: "gpt2-medium"
+  fallback_model: "gpt2"
+  cache_dir: "./models/cache"
+  max_length: 500
+  temperature: 0.7
+  top_k: 50
+  top_p: 0.95
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  timeout: 60
+
+# Monitoring
+monitoring:
+  log_level: "INFO"
+  log_file: "./logs/app.log"
+  metrics_enabled: true
+  prometheus_port: 9090

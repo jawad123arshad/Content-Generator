@@ -1,0 +1,50 @@
+# 📄 .gitignore - Complete version for your project
+
+# Virtual Environment (BIG - 500MB)
+content_generator/
+venv/
+env/
+ENV/
+
+# Model files (BIG - 2-4GB)
+models/
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# MLflow tracking (BIG - can grow)
+mlruns/
+
+# Generated content (Your outputs)
+logs/
+outputs/
+*.log
+*.jsonl
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment variables (Sensitive)
+.env
+.env.local
+.env.*.local
+
+# IDE settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Old/unused code (Keep locally, ignore from git)
+.github/           ← CI/CD (not needed for demo)
+tests/             ← Test files (optional)
+config/            ← Config files (not used in current setup)
+
+# Distribution files
+dist/
+build/
+*.egg-info/
